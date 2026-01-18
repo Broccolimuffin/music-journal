@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
   <title>Music Journal</title>
 
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="theme-color" content="#111111">
+  <!-- Outfit font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
 </head>
 <body>
-  <h1>Music Journal</h1>
 
-  <div class="today">
-    <h2>Add Entry</h2>
+  <header>
+    <h1>Music Journal</h1>
+  </header>
 
-    <label>
-      Date
-      <input type="date" id="dateInput">
-    </label>
+  <main>
+    <section class="entry-form">
+      <label>
+        Date
+        <input type="date" id="dateInput" />
+      </label>
 
-    <input id="songInput" placeholder="Song – Artist" autocomplete="off">
-    <div id="autocomplete" class="autocomplete"></div>
+      <label>
+        Song & Artist
+        <input type="text" id="songInput" placeholder="Song - Artist" autocomplete="off" />
+        <div id="autocomplete"></div>
+      </label>
 
-    <textarea id="noteInput" placeholder="Optional note"></textarea>
-    <button id="saveBtn">Save</button>
-  </div>
+      <label>
+        Optional Note
+        <textarea id="noteInput" placeholder="Thoughts, memories, vibes..."></textarea>
+      </label>
 
-  <h2>Past Days</h2>
-  <div id="entries"></div>
+      <button id="saveBtn">Save Entry</button>
+    </section>
+
+    <section class="controls">
+      <label>
+        View by
+        <select id="sortSelect">
+          <option value="day">Day</option>
+          <option value="week">Week</option>
+          <option value="month">Month</option>
+          <option value="year">Year</option>
+        </select>
+      </label>
+    </section>
+
+    <section id="entries"></section>
+  </main>
 
   <script src="app.js"></script>
 </body>
