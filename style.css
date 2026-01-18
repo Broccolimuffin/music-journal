@@ -16,39 +16,43 @@ header {
   color: #000;
 }
 
-h1 {
-  margin: 0;
-  font-weight: 700;
-}
-
 main {
   max-width: 520px;
   margin: auto;
   padding: 16px;
 }
 
-.entry-form label {
+label {
   display: block;
-  margin-bottom: 12px;
-  font-weight: 500;
+  margin-bottom: 14px;
 }
 
 input,
 textarea,
-select,
-button {
+button,
+select {
   width: 100%;
   margin-top: 6px;
   padding: 10px;
   border-radius: 10px;
   border: none;
   font-size: 14px;
-  font-family: "Outfit", system-ui, sans-serif;
+}
+
+input,
+textarea {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaaaaa;
 }
 
 textarea {
-  resize: vertical;
   min-height: 70px;
+  resize: vertical;
 }
 
 button {
@@ -62,21 +66,18 @@ button:hover {
   opacity: 0.9;
 }
 
-.controls {
-  margin: 16px 0;
-}
-
 #autocomplete {
   background: #1e1e1e;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin-top: 4px;
   overflow: hidden;
 }
 
 .autocomplete-item {
   display: flex;
   align-items: center;
+  gap: 10px;
   padding: 8px;
-  gap: 8px;
   cursor: pointer;
 }
 
@@ -85,29 +86,72 @@ button:hover {
 }
 
 .autocomplete-item img {
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+}
+
+.controls {
+  margin: 20px 0;
 }
 
 .entry {
+  display: flex;
+  gap: 10px;
   background: #1e1e1e;
   border-radius: 12px;
   padding: 10px;
   margin-bottom: 10px;
   font-size: 13px;
+  align-items: center;
 }
 
-.entry strong {
-  font-weight: 600;
+.entry img {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+}
+
+.entry-content {
+  flex: 1;
 }
 
 .entry-date {
-  opacity: 0.7;
   font-size: 12px;
+  opacity: 0.6;
 }
 
 .entry-note {
   margin-top: 6px;
   opacity: 0.85;
+}
+
+/* Edit/Delete button container */
+.entry-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.entry-buttons button {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 6px;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a2a2a;
+}
+
+.entry-buttons button:hover {
+  background: #3a3a3a;
+}
+
+/* Simple SVG icons */
+.entry-buttons svg {
+  width: 16px;
+  height: 16px;
+  fill: #afafaf;
 }
