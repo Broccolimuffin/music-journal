@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music Journal</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="theme-color" content="#111111">
+</head>
+<body>
+  <h1>Music Journal</h1>
+
+  <div class="today">
+    <h2>Add Entry</h2>
+
+    <label>
+      Date
+      <input type="date" id="dateInput">
+    </label>
+
+    <input id="songInput" placeholder="Song – Artist" autocomplete="off">
+    <div id="autocomplete" class="autocomplete"></div>
+
+    <textarea id="noteInput" placeholder="Optional note"></textarea>
+    <button id="saveBtn">Save</button>
+  </div>
+
+  <h2>Past Days</h2>
+  <div id="entries"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
