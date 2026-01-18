@@ -1,193 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", system-ui, sans-serif;
+}
 
 body {
-  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
-  background: #121212;
-  color: #fff;
   margin: 0;
-  padding: 20px;
+  background: #121212;
+  color: #ffffff;
+}
+
+header {
+  padding: 16px;
+  text-align: center;
+  background: #1db954;
+  color: #000;
 }
 
 h1 {
-  margin-top: 0;
+  margin: 0;
   font-weight: 700;
-  font-size: 28px;
-  color: #1DB954;
 }
 
-h2 {
-  font-weight: 600;
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+main {
+  max-width: 520px;
+  margin: auto;
+  padding: 16px;
 }
 
-.today {
-  background: #181818;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  margin-bottom: 30px;
-  position: relative;
-}
-
-label {
+.entry-form label {
   display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #b3b3b3;
+  margin-bottom: 12px;
+  font-weight: 500;
 }
 
-input, textarea {
+input,
+textarea,
+select,
+button {
   width: 100%;
-  margin-bottom: 10px;
-  padding: 12px;
-  font-size: 16px;
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 10px;
   border: none;
-  border-radius: 8px;
-  background: #282828;
-  color: #fff;
+  font-size: 14px;
+  font-family: "Outfit", system-ui, sans-serif;
 }
 
-input:focus, textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #1DB954;
+textarea {
+  resize: vertical;
+  min-height: 70px;
 }
 
 button {
-  width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  background: #1DB954;
-  border: none;
-  border-radius: 8px;
+  background: #1db954;
+  color: #000;
   font-weight: 600;
-  color: #fff;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 button:hover {
-  background: #1ed760;
+  opacity: 0.9;
 }
 
-/* Past entries */
-.entry {
-  border-bottom: 1px solid #333;
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 14px;
+.controls {
+  margin: 16px 0;
 }
 
-.entry:hover {
-  background: #222;
-}
-
-.entry .text {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.entry img.art {
-  width: 50px;
-  height: 50px;
-  border-radius: 6px;
-  flex-shrink: 0;
-}
-
-.entry strong {
-  font-size: 14px;
-  margin-bottom: 2px;
-}
-
-.entry em {
-  font-size: 12px;
-  color: #b3b3b3;
-}
-
-/* Action buttons */
-.entry .actions {
-  display: flex;
-  gap: 8px;
-  position: relative;
-}
-
-.entry .actions button {
-  background: transparent;
-  border: none;
-  color: #b3b3b3;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.entry .actions button:hover {
-  color: #1DB954;
-}
-
-/* Edit popup menu */
-.edit-popup {
-  position: absolute;
-  background: #282828;
-  border: 1px solid #333;
-  padding: 10px;
+#autocomplete {
+  background: #1e1e1e;
   border-radius: 8px;
-  z-index: 2000;
-  width: 220px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.7);
-}
-
-.edit-popup input,
-.edit-popup textarea {
-  width: 100%;
-  margin-bottom: 6px;
-  font-size: 14px;
-  padding: 8px;
-  border-radius: 6px;
-  background: #181818;
-  color: #fff;
-  border: none;
-}
-
-.edit-popup button {
-  width: 48%;
-  margin-right: 4%;
-  padding: 8px;
-  font-size: 14px;
-}
-
-.edit-popup button:last-child {
-  margin-right: 0;
-}
-
-/* Autocomplete */
-.autocomplete {
-  background: #222;
-  border: 1px solid #333;
-  max-height: 200px;
-  overflow-y: auto;
-  position: absolute;
-  width: 100%;
-  z-index: 1000;
+  overflow: hidden;
 }
 
 .autocomplete-item {
   display: flex;
   align-items: center;
-  padding: 6px 10px;
+  padding: 8px;
+  gap: 8px;
   cursor: pointer;
 }
 
 .autocomplete-item:hover {
-  background: #333;
+  background: #2a2a2a;
 }
 
-.autocomplete-art {
-  width: 40px;
-  height: 40px;
+.autocomplete-item img {
+  width: 32px;
+  height: 32px;
   border-radius: 4px;
-  margin-right: 10px;
+}
+
+.entry {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.entry strong {
+  font-weight: 600;
+}
+
+.entry-date {
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.entry-note {
+  margin-top: 6px;
+  opacity: 0.85;
 }
